@@ -1,0 +1,190 @@
+:root{
+   --taupe: #463f3aff; --battleship-gray: #8a817cff; --silver: #bcb8b1ff; --isabelline: #f4f3eeff; --melon: #e0afa0ff;
+}
+*{
+    margin:0;
+    padding:0;
+    
+}
+ 
+
+body {
+ 
+  background: radial-gradient(circle at center, var(--battleship-gray), var(--taupe));
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+
+  position: relative;
+  overflow: hidden;
+  color: var(--taupe); 
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  min-height:100vh;
+  font-size: larger;
+}
+
+
+body::before {
+  content: "₹ $ € £ ¥";
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  font-size: 5rem;
+  color: var(--melon);
+  opacity: 0.08;
+  letter-spacing: 2rem;
+  animation: float1 20s linear infinite;
+}
+
+body::after {
+  content: "€ £ ¥ ₹ $";
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  font-size: 6rem;
+  color: var(--silver);
+  opacity: 0.06;
+  letter-spacing: 2.5rem;
+  animation: float2 25s linear infinite;
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes float1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(15deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(40px) rotate(-15deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+   
+ .container {
+    padding:3rem;
+    border-radius:1rem;
+    background: #f4f3eeff;
+    min-height:40vh;
+    width:35vh;
+  background: var(--silver);
+  color: var(--taupe);
+
+  
+  
+  box-shadow: 0 8px 20px rgba(70, 63, 58, 0.6);
+
+  
+  border: 2px solid var(--battleship-gray);
+
+  
+  animation: fadeIn 1.5s ease;
+}
+.container h2 {
+  color: var(--taupe);
+  margin-bottom: 1rem;
+}
+.container button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--taupe);
+  color: var(--isabelline);
+  cursor: pointer;
+  transition: 0.3s ease;
+  min-height:3rem;
+  border:1px solid transparent;
+}
+
+.container button:hover {
+  background: var(--isabelline);
+  color: var(--taupe);
+  border: 1px solid #8a817cff;
+  transform: scale(1.1);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+form{
+    margin: rem 0 2rem 0;
+}
+form select,button,input{
+    width:97%;
+    border:none;
+    outline:none;
+    border-radius:0.5rem;
+  
+  
+}
+form input{
+    border: 2px solid #8a817cff;
+    height:2rem;
+    padding-left:0.5rem;
+    background-color: #bcb8b1ff;
+ 
+}
+form input:focus{
+     border-color: var(--taupe);
+  box-shadow: 0 0 8px var(--battleship-gray);
+  background: var(--silver);
+  
+}
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:2rem;
+}
+.dropdown i{
+    margin-top: 1.5rem;
+}
+.select-container img{
+    max-width:2rem;
+}
+.select-container{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width:6rem;
+    border-radius:0.5rem;
+    border: 2px solid #8a817cff;
+
+    
+}
+.select-container select{
+    width:auto;
+    font-size: 1rem;
+    background:transparent;
+}
+.select-container select option{
+    background:var(--isabelline);
+    color:var(--taupe);
+}
+.msg{
+    margin:2rem 0 2rem 0;
+}
+form button{
+    height:2.5rem;
+    background-color: #e5e5e5ff;
+    font-size:1.1rem;
+    cursor: pointer;
+    background-color: #463f3aff;
+    color:white;
+}
+  
